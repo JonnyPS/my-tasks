@@ -1,0 +1,9 @@
+.status--not-started {
+  background-color: lightgrey;
+}
+.status--in-progress {
+  background-color: orange;
+}
+.status--completed {
+  background-color: lightgreen;
+}
