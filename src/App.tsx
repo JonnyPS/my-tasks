@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import "./App.css";
 import { Task } from "./Components/Task";
 import { Button } from "./Components/Button";
 import type { TaskProps } from "./Types/TaskProps";
