@@ -20,18 +20,18 @@ body {
 }
 
 .container > ul {
-  position: relative;
-  top: 40px;
   list-style: none;
   padding: 0;
+  position: relative;
+  top: 50px;
 }
 
 .container > ul > li {
-  position: relative;
+  background-color: lightblue;
   border-bottom: 1px solid lightgrey;
   margin-bottom: 20px;
   padding: 10px;
-  background-color: lightblue;
+  position: relative;
 }
 
 .container > ul > li > span {
@@ -40,18 +40,18 @@ body {
 }
 
 .newTaskButton {
-  z-index: 1;
-  cursor: pointer;
   background-color: aquamarine;
-  border: 0;
-  height: fit-content;
-  padding: 10px;
   border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  height: fit-content;
+  left: 50%;
+  padding: 10px;
   position: fixed;
   top: 0;
-  left: 50%;
   transform: translate(-50%);
-  max-width: 50%;
+  width: 100%;
+  z-index: 1;
 }
 
 .newTaskButton:hover {
@@ -60,7 +60,7 @@ body {
 
 .InfoContainer {
   position: relative;
-  /* top: 40px; */
+  top: 40px;
 }
 
 .InfoContainer > p {
@@ -69,5 +69,22 @@ body {
 
 .FilterButtons {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+}
+
+.FilterButtons > button {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 744px) {
+  .newTaskButton {
+    max-width: 50%;
+    width: unset;
+  }
+  .FilterButtons {
+    flex-direction: row;
+    gap: 10px;
+  }
 }
