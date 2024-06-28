@@ -96,6 +96,7 @@ function App() {
       setMutableAllTaskData(allTaskData);
     }
     console.log("allTaskData", allTaskData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allTaskData]);
 
   useEffect(() => {

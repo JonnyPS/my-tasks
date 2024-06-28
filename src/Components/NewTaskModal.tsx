@@ -38,6 +38,7 @@ export function NewTaskModal({
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleClose = () => {
     if (dialogRef.current) {
       onClose();
