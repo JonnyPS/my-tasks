@@ -83,6 +83,10 @@ body {
   margin-bottom: 10px;
 }
 
+.NoTasksMessage {
+  margin-top: 50px;
+}
+
 @media only screen and (min-width: 744px) {
   .newTaskButton {
     max-width: 50%;

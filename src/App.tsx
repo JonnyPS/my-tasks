@@ -72,6 +72,10 @@ function App() {
     setMutableAllTaskData(showFilteredTickets(allTaskData, "Not started"));
   };
 
+  const handleFilterByShowAll = () => {
+    setMutableAllTaskData(allTaskData);
+  };
+
   const setLocalStorage = () => {
     localStorage.setItem("tasks", JSON.stringify(allTaskData));
   };
@@ -125,6 +129,8 @@ function App() {
           onClick={handleFilterByNotStarted}
           label="Show Not Started Tickets only"
         />
+
+        <Button onClick={handleFilterByShowAll} label="Show All Tickets" />
       </div>
       {allTaskData.length === 0 ? (
         <p>No tasks - you are all caught up!</p>
@@ -145,7 +151,7 @@ function App() {
           })}
         </ul>
       ) : (
-        <p>No tasks to show</p>
+        <p className={styles["NoTasksMessage"]}>No tasks to show</p>
       )}
       {isModalOpen ? (
         <NewTaskModal
