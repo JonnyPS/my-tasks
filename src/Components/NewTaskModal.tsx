@@ -3,6 +3,8 @@ import { createPortal } from "react-dom";
 import type { NewTaskModalProps } from "../Types/NewTaskModalProps";
 import { Button } from "./Button";
 import type { TaskProps } from "../Types/TaskProps";
+import styles from "./task-modal.module.css";
+
 export function NewTaskModal({
   isOpen,
   onClose,
@@ -62,29 +64,40 @@ export function NewTaskModal({
   }, [handleClose, isOpen]);
 
   return createPortal(
-    <dialog ref={dialogRef} onKeyDown={handleKeyDown}>
-      <form>
-        <label>
+    <dialog
+      ref={dialogRef}
+      onKeyDown={handleKeyDown}
+      className={styles["TaskModal__Dialog"]}
+    >
+      <form className={styles["TaskModal"]}>
+        <label className={styles["TaskModal__Label"]}>
           Title:
           <input
             type="text"
             name="title"
             value={newTask.title}
             onChange={handleChange}
+            className={styles["TaskModal__Input"]}
           />
         </label>
-        <label>
+        <label className={styles["TaskModal__Label"]}>
           Content:
           <input
             type="text"
             name="content"
             value={newTask.content}
             onChange={handleChange}
+            className={styles["TaskModal__Input"]}
           />
         </label>
-        <label>
+        <label className={styles["TaskModal__Label"]}>
           Status:
-          <select name="status" value={newTask.status} onChange={handleChange}>
+          <select
+            name="status"
+            value={newTask.status}
+            onChange={handleChange}
+            className={styles["TaskModal__Input"]}
+          >
             <option value="Not started">Not started</option>
             <option value="In progress">In progress</option>
             <option value="Completed">Completed</option>
