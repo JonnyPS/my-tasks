@@ -13,6 +13,10 @@ body {
   background-color: #fcf9f7;
 }
 
+body {
+  overflow: auto !important;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -24,6 +28,7 @@ body {
   padding: 0;
   position: relative;
   top: 50px;
+  overflow: auto;
 }
 
 .container > ul > li {
